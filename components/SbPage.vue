@@ -1,11 +1,6 @@
 <template>
   <div v-editable="blok">
-    <component
-      :is="bl.component"
-      v-for="bl in blok.body"
-      :key="bl._uid"
-      :blok="bl"
-    />
+    <SbHero :blok="blok.body[0]" />
   </div>
 </template>
 
@@ -17,5 +12,5 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <header class="max-w-5xl ml-auto py-8">
+  <header class="header max-w-screen-2xl ml-auto p-8">
     <nav>
       <ul class="flex justify-end">
         <li class="mr-4" v-for="({ text, link }, i) in links" :key="i">
@@ -18,19 +18,35 @@ export default {
     return {
       links: [
         {
-          link: '/',
-          text: 'Home',
+          link: "/",
+          text: "Home",
         },
         {
-          link: '/collections',
-          text: 'Collections',
+          link: "/collections",
+          text: "Collections",
         },
         {
-          link: '/blog',
-          text: 'Blog',
+          link: "/blog",
+          text: "Blog",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
+
+<style scoped>
+.header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.header a {
+  color: antiquewhite;
+}
+</style>
